@@ -23,8 +23,9 @@ button{
 }
 #respuestas{
     padding-bottom: 1px;
-    
+}
 
-   
-
+#errores{
+    color: #c20d0d;
+    font-weight: bold;
 }
