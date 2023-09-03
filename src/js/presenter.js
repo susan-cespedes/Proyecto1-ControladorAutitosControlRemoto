@@ -8,7 +8,7 @@ const errores = document.querySelector("#errores");
 ejecutar.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const resultadocomando =comandos.value.trim() ;
+  const resultadocomando =comandos.value.trim().toLocaleUpperCase();
   const regex =  /^\d+,\d+\/\d+,\d+[NEOS]+\/[IDA]+$/;
   if (regex.test(resultadocomando)){
 
