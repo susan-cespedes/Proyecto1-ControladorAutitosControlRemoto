@@ -57,6 +57,22 @@ function validarposicion(comando) {
      }
    }
 
+   // para el comando A
+   if (comando === 'A')
+   {
+    // Cambiar el giro a la derecha en lugar de la izquierda
+    if (orientacion === 'N') {
+      yFinal++;
+    } else if (orientacion === 'E') {
+      xFinal++;
+    } else if (orientacion === 'S') {
+      yFinal--;
+    } else if (orientacion === 'O') {
+      xFinal--;
+    }
+  }
+
+
     }
   
     const posicionFinal = `${xFinal},${yFinal}${orientacion}`;

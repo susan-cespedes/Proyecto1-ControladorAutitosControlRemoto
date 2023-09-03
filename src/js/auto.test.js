@@ -15,4 +15,9 @@ describe("Validar tamaño de la matriz < 20x20",()=>{
         expect(validarposicion('5,5/1,2N/D')).toEqual('1,2E');
     });
 
+    it("Validar la posición final del comando (A)",()=>{
+
+        expect(validarposicion('5,5/0,0N/A')).toEqual('0,1N');
+    });
+
 });
