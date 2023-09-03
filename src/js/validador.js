@@ -71,8 +71,10 @@ function validarposicion(comando) {
       xFinal--;
     }
   }
-
-
+    if((xFinal<0)||(yFinal<0))
+      {
+        return mostrarMensaje=`<p id="errores"> Te encuentras fuera de la superfcie :(</p>`
+      }
     }
   
     const posicionFinal = `${xFinal},${yFinal}${orientacion}`;
