@@ -27,7 +27,8 @@ ejecutar.addEventListener("click", (event) => {
     resultado.innerHTML =`
     <p><span id="subtitulos">Tamaño Matriz</span>: ${validacion.mensajevalidacion}</p>
     <p><span id="subtitulos"> Posición Inicial: </span><span id="respuestas"> ${letra}</span></p>
-   
+    <p><span id="subtitulos">Comandos:</span><span>${avance}</span></p>
+    
     `;
     errores.innerHTML =`<p><span id="subtitulos"></span>${validacion.mensajeinvalidacion}</p>`;
   }
