@@ -9,12 +9,13 @@ ejecutar.addEventListener("click", (event) => {
   event.preventDefault();
 
   const resultadocomando =comandos.value.trim() ;
-  const regex =  /^\d+,\d+\/\d+,\d+[NEOS]$/;
+  const regex =  /^\d+,\d+\/\d+,\d+[NEOS]+\/[IDA]+$/;
   if (regex.test(resultadocomando)){
 
   const partes=resultadocomando.split('/');
   const matriz=partes[0];
   const letra=partes[1];
+  const avance=partes[2];
 
     const dimensiones=matriz.split(',').map(Number);
     
@@ -25,9 +26,8 @@ ejecutar.addEventListener("click", (event) => {
    
     resultado.innerHTML =`
     <p><span id="subtitulos">Tamaño Matriz</span>: ${validacion.mensajevalidacion}</p>
-    <p><span id="subtitulos"> Posición Inicial: </span>
-    <span id="respuestas"> ${letra}</span>
-    </p>
+    <p><span id="subtitulos"> Posición Inicial: </span><span id="respuestas"> ${letra}</span></p>
+   
     `;
     errores.innerHTML =`<p><span id="subtitulos"></span>${validacion.mensajeinvalidacion}</p>`;
   }
